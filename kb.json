@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "department": "Computer Science and Engineering",
+    "university": "Khulna University of Engineering & Technology",
+    "term": "4th Year 1st Term",
+    "session": "2024-2025",
+    "class_starting_date": "2026-07-05",
+    "class_starting_day_of_week": "Sunday",
+    "periods": {
+      "1": {"start": "08:00", "end": "08:50"},
+      "2": {"start": "08:50", "end": "09:40"},
+      "3": {"start": "09:40", "end": "10:30"},
+      "4": {"start": "10:40", "end": "11:30"},
+      "5": {"start": "11:30", "end": "12:20"},
+      "6": {"start": "12:20", "end": "13:10"},
+      "7": {"start": "14:30", "end": "15:20"},
+      "8": {"start": "15:20", "end": "16:10"},
+      "9": {"start": "16:10", "end": "17:00"}
+    },
+    "period_length_minutes": 50,
+    "notation": {
+      "c_suffix": "Marks a 'common' theory slot. Two teacher codes are listed for it.",
+      "slash": "A '/' between two teacher codes on a common ('c') slot means EITHER of the two teachers may take that session (backup/either-available), not that both attend.",
+      "plus": "A '+' between two teacher codes on a lab means BOTH teachers jointly conduct that lab session.",
+      "even_course_numbers": "Course codes ending in an even digit (4102,4106,4112,4116,4122) are laboratory courses, each conducted by 2 teachers.",
+      "odd_course_numbers": "Course codes ending in an odd digit (4101,4105,4111,4115,4121) are theory courses.",
+      "cse4000": "Capstone Project/Thesis. The scheduled slot is time reserved for students to meet individually with their own assigned thesis supervisor (supervisors vary per student), not a joint class."
+    },
+    "sections": ["A", "B"],
+    "subgroups": {
+      "A": ["A1", "A2"],
+      "B": ["B1", "B2"]
+    },
+    "subgroup_definition": "Section A (roll 1-60) splits into A1 (roughly roll 1-30) and A2 (roughly roll 31-60) for lab sessions. Same pattern for B -> B1/B2.",
+    "rooms": {
+      "A": {"theory": "CSE 501", "lab": {"CSE4112": "CSE 104", "CSE4116": "CSE 104", "CSE4106": "CSE 201", "CSE4102": "CSE 305", "CSE4122": "CSE 305"}},
+      "B": {"theory": "CSE 502", "lab": {"CSE4112": "CSE 104", "CSE4116": "CSE 104", "CSE4106": "CSE 201", "CSE4102": "CSE 305", "CSE4122": "CSE 305"}}
+    }
+  },
+
+  "teachers": {
+    "AH":  "Dr. K. M. Azharul Hasan",
+    "RA":  "Dr. Kazi Md. Rokibul Alam",
+    "MAH": "Dr. Muhammad Aminul Haque",
+    "SMA": "Dr. Sk. Md. Masudul Ahsan",
+    "AM":  "Dr. Al-Mahmud",
+    "IH":  "Dr. Sk. Imran Hossain",
+    "DD":  "Ms. Dola Das",
+    "SH":  "Mr. Md. Sakhawat Hossain",
+    "NHS": "Mr. Md. Nazirulhasan Shawon",
+    "TR":  "Mr. Md Tajmilur Rahman",
+    "NFS": "Mr. Nabil Faiyaz Sadi",
+    "MAN": "Mr. Md. Mubtashim Abrar Nihal"
+  },
+
+  "courses": {
+    "CSE4000": {"title": "Capstone Project/Thesis", "type": "thesis"},
+    "CSE4101": {"title": "Computer Graphics and Image Processing", "type": "theory"},
+    "CSE4102": {"title": "Computer Graphics and Image Processing Laboratory", "type": "lab", "paired_with": "CSE4112"},
+    "CSE4105": {"title": "Computer Networks", "type": "theory"},
+    "CSE4106": {"title": "Computer Networks Laboratory", "type": "lab", "paired_with": null},
+    "CSE4111": {"title": "Machine Learning", "type": "theory"},
+    "CSE4112": {"title": "Machine Learning Laboratory", "type": "lab", "paired_with": "CSE4102"},
+    "CSE4115": {"title": "Computer Security", "type": "theory"},
+    "CSE4116": {"title": "Computer Security Laboratory", "type": "lab", "paired_with": "CSE4122"},
+    "CSE4121": {"title": "Natural Language Processing", "type": "theory"},
+    "CSE4122": {"title": "Natural Language Processing Laboratory", "type": "lab", "paired_with": "CSE4116"}
+  },
+
+  "sessions": [
+    {"id":"A-SUN-3","section":"A","day":"Sunday","periods":[3],"course":"CSE4105","common":true,"teachers":["SH","NFS"],"teacher_mode":"either","subgroup":null,"type":"theory"},
+    {"id":"A-SUN-4","section":"A","day":"Sunday","periods":[4],"course":"CSE4101","common":false,"teachers":["MAN"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"A-SUN-5","section":"A","day":"Sunday","periods":[5],"course":"CSE4111","common":false,"teachers":["AM"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"A-SUN-789","section":"A","day":"Sunday","periods":[7,8,9],"course":"CSE4106","common":false,"teachers":["IH","SH"],"teacher_mode":"both","subgroup":"A1","type":"lab","rotates":false},
+
+    {"id":"A-MON-3","section":"A","day":"Monday","periods":[3],"course":"CSE4121","common":false,"teachers":["NHS"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"A-MON-4","section":"A","day":"Monday","periods":[4],"course":"CSE4115","common":false,"teachers":["DD"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"A-MON-5","section":"A","day":"Monday","periods":[5],"course":"CSE4111","common":true,"teachers":["MAH","AM"],"teacher_mode":"either","subgroup":null,"type":"theory"},
+    {"id":"A-MON-789","section":"A","day":"Monday","periods":[7,8,9],"course":"CSE4106","common":false,"teachers":["IH","SH"],"teacher_mode":"both","subgroup":"A2","type":"lab","rotates":false},
+
+    {"id":"A-TUE-4","section":"A","day":"Tuesday","periods":[4],"course":"CSE4121","common":true,"teachers":["AH","NHS"],"teacher_mode":"either","subgroup":null,"type":"theory"},
+    {"id":"A-TUE-5","section":"A","day":"Tuesday","periods":[5],"course":"CSE4115","common":false,"teachers":["RA"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"A-TUE-789-1","section":"A","day":"Tuesday","periods":[7,8,9],"course":"CSE4102","common":false,"teachers":["TR","MAN"],"teacher_mode":"both","subgroup":"rotates","rotation_pattern":"A1_odd_A2_even","type":"lab","rotates":true,"rotation_group":"A-TUE-789"},
+    {"id":"A-TUE-789-2","section":"A","day":"Tuesday","periods":[7,8,9],"course":"CSE4112","common":false,"teachers":["MAH","NFS"],"teacher_mode":"both","subgroup":"rotates","rotation_pattern":"A2_odd_A1_even","type":"lab","rotates":true,"rotation_group":"A-TUE-789"},
+
+    {"id":"A-WED-1","section":"A","day":"Wednesday","periods":[1],"course":"CSE4105","common":false,"teachers":["NFS"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"A-WED-2","section":"A","day":"Wednesday","periods":[2],"course":"CSE4111","common":false,"teachers":["MAH"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"A-WED-3","section":"A","day":"Wednesday","periods":[3],"course":"CSE4101","common":true,"teachers":["SMA","MAN"],"teacher_mode":"either","subgroup":null,"type":"theory"},
+    {"id":"A-WED-456-1","section":"A","day":"Wednesday","periods":[4,5,6],"course":"CSE4116","common":false,"teachers":["RA","DD"],"teacher_mode":"both","subgroup":"rotates","rotation_pattern":"A1_odd_A2_even","type":"lab","rotates":true,"rotation_group":"A-WED-456"},
+    {"id":"A-WED-456-2","section":"A","day":"Wednesday","periods":[4,5,6],"course":"CSE4122","common":false,"teachers":["AH","NHS"],"teacher_mode":"both","subgroup":"rotates","rotation_pattern":"A2_odd_A1_even","type":"lab","rotates":true,"rotation_group":"A-WED-456"},
+    {"id":"A-WED-789","section":"A","day":"Wednesday","periods":[7,8,9],"course":"CSE4000","common":false,"teachers":[],"teacher_mode":"individual_supervisor","subgroup":null,"type":"thesis"},
+
+    {"id":"A-THU-2","section":"A","day":"Thursday","periods":[2],"course":"CSE4105","common":false,"teachers":["SH"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"A-THU-3","section":"A","day":"Thursday","periods":[3],"course":"CSE4121","common":false,"teachers":["AH"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"A-THU-4","section":"A","day":"Thursday","periods":[4],"course":"CSE4115","common":true,"teachers":["RA","DD"],"teacher_mode":"either","subgroup":null,"type":"theory"},
+    {"id":"A-THU-5","section":"A","day":"Thursday","periods":[5],"course":"CSE4101","common":false,"teachers":["SMA"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"A-THU-789","section":"A","day":"Thursday","periods":[7,8,9],"course":"CSE4000","common":false,"teachers":[],"teacher_mode":"individual_supervisor","subgroup":null,"type":"thesis"},
+
+    {"id":"B-SUN-1","section":"B","day":"Sunday","periods":[1],"course":"CSE4101","common":false,"teachers":["MAN"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"B-SUN-2","section":"B","day":"Sunday","periods":[2],"course":"CSE4105","common":true,"teachers":["SH","NFS"],"teacher_mode":"either","subgroup":null,"type":"theory"},
+    {"id":"B-SUN-3","section":"B","day":"Sunday","periods":[3],"course":"CSE4111","common":false,"teachers":["AM"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"B-SUN-456-1","section":"B","day":"Sunday","periods":[4,5,6],"course":"CSE4116","common":false,"teachers":["RA","DD"],"teacher_mode":"both","subgroup":"rotates","rotation_pattern":"B1_odd_B2_even","type":"lab","rotates":true,"rotation_group":"B-SUN-456"},
+    {"id":"B-SUN-456-2","section":"B","day":"Sunday","periods":[4,5,6],"course":"CSE4122","common":false,"teachers":["AH","NHS"],"teacher_mode":"both","subgroup":"rotates","rotation_pattern":"B2_odd_B1_even","type":"lab","rotates":true,"rotation_group":"B-SUN-456"},
+
+    {"id":"B-MON-1","section":"B","day":"Monday","periods":[1],"course":"CSE4121","common":false,"teachers":["NHS"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"B-MON-2","section":"B","day":"Monday","periods":[2],"course":"CSE4115","common":false,"teachers":["DD"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"B-MON-3","section":"B","day":"Monday","periods":[3],"course":"CSE4111","common":true,"teachers":["MAH","AM"],"teacher_mode":"either","subgroup":null,"type":"theory"},
+    {"id":"B-MON-456","section":"B","day":"Monday","periods":[4,5,6],"course":"CSE4106","common":false,"teachers":["IH","SH"],"teacher_mode":"both","subgroup":"B1","type":"lab","rotates":false},
+
+    {"id":"B-TUE-2","section":"B","day":"Tuesday","periods":[2],"course":"CSE4121","common":true,"teachers":["AH","NHS"],"teacher_mode":"either","subgroup":null,"type":"theory"},
+    {"id":"B-TUE-3","section":"B","day":"Tuesday","periods":[3],"course":"CSE4115","common":false,"teachers":["RA"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"B-TUE-456","section":"B","day":"Tuesday","periods":[4,5,6],"course":"CSE4106","common":false,"teachers":["IH","SH"],"teacher_mode":"both","subgroup":"B2","type":"lab","rotates":false},
+
+    {"id":"B-WED-3","section":"B","day":"Wednesday","periods":[3],"course":"CSE4105","common":false,"teachers":["NFS"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"B-WED-4","section":"B","day":"Wednesday","periods":[4],"course":"CSE4111","common":false,"teachers":["MAH"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"B-WED-5","section":"B","day":"Wednesday","periods":[5],"course":"CSE4101","common":true,"teachers":["SMA","MAN"],"teacher_mode":"either","subgroup":null,"type":"theory"},
+    {"id":"B-WED-789-1","section":"B","day":"Wednesday","periods":[7,8,9],"course":"CSE4102","common":false,"teachers":["TR","MAN"],"teacher_mode":"both","subgroup":"rotates","rotation_pattern":"B1_odd_B2_even","type":"lab","rotates":true,"rotation_group":"B-WED-789"},
+    {"id":"B-WED-789-2","section":"B","day":"Wednesday","periods":[7,8,9],"course":"CSE4112","common":false,"teachers":["MAH","NFS"],"teacher_mode":"both","subgroup":"rotates","rotation_pattern":"B2_odd_B1_even","type":"lab","rotates":true,"rotation_group":"B-WED-789"},
+
+    {"id":"B-THU-3","section":"B","day":"Thursday","periods":[3],"course":"CSE4115","common":true,"teachers":["RA","DD"],"teacher_mode":"either","subgroup":null,"type":"theory","note":"CSE4115c(RA/DD) lab-style slot label in table read as theory common slot"},
+    {"id":"B-THU-4","section":"B","day":"Thursday","periods":[4],"course":"CSE4105","common":false,"teachers":["SH"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"B-THU-5","section":"B","day":"Thursday","periods":[5],"course":"CSE4121","common":false,"teachers":["AH"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"B-THU-6","section":"B","day":"Thursday","periods":[6],"course":"CSE4101","common":false,"teachers":["SMA"],"teacher_mode":"single","subgroup":null,"type":"theory"},
+    {"id":"B-WED-789-THESIS","section":"B","day":"Tuesday","periods":[7,8,9],"course":"CSE4000","common":false,"teachers":[],"teacher_mode":"individual_supervisor","subgroup":null,"type":"thesis"},
+    {"id":"B-THU-789","section":"B","day":"Thursday","periods":[7,8,9],"course":"CSE4000","common":false,"teachers":[],"teacher_mode":"individual_supervisor","subgroup":null,"type":"thesis"}
+  ],
+
+  "verification_note": "Verified 2026-08-29 against the source routine image, including SEC-B Thursday P3-P6 and both CSE4000 thesis slots. Section A sits with thesis supervisors Wednesday and Thursday P7-9; Section B sits with supervisors Tuesday and Thursday P7-9 -- this asymmetry is intentional, not a transcription error."
+}
